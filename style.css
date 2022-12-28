@@ -8,6 +8,12 @@ body{
     background-color: #111;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 * {
   box-sizing: border-box;
   font-family: 'MedievalSharp', cursive;
@@ -262,17 +268,6 @@ h1 {
 
 
 
-/**************************/
-/* MEDIA QUERY */
-/**************************/
-
-/* BELOW 832px (Tablets) */
-@media (max-width: 52em) {
-  html {
-    /* 8px / 16px = 0.5 = 50% */
-    font-size: 50%;
-  }
-}
 
 
 
@@ -416,7 +411,7 @@ h1 {
     bottom: 30px;
     left: 50%;
     top: 120px;
-    margin-left: -16px;
+    margin-left: -22px;
     display: block;
     width: 60px;
     height: 60px;
@@ -486,14 +481,135 @@ h1 {
 }
 
 
+.text_ok_2 {
+    position: relative;
+    padding: 25px;
+    background-color: rgba(51, 51, 51, 0);
+    top: 80px;
+    font-size: 18px;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+}
+
+
+
+
+/*CLOCK*/
+#time {
+    position: relative;
+    top: 100px;
+    gap: 40px;
+    color: #FFF;
+    font-size: 20px;
+    padding-bottom: 60px;
+}
+#time .circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#time .circle svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+#time .circle svg circle {
+    width: 100%;
+    height: 100%;
+    fill: transparent ;
+    stroke: #440a0a;
+    stroke-width: 4;
+}
+#time .circle svg circle:nth-child(2) {
+    stroke: var(--clr);
+    stroke: rgb(255, 34, 34);
+    stroke-dasharray: 440;
+}
+#time div {
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+}
+#time div span {
+    font-size: 0.35em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+#time div.num {
+    flex-direction: column;
+}
+
+#time .ap {
+    position: relative;
+    font-size: lem;
+    transform: translateX(-20px);
+}
+.dots {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+   
+}
+.dots::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    width: 15px;
+    height: 15px;
+    background: rgb(255, 45, 45);
+    border-radius: 50%;
+    box-shadow: 0 0 20px red, 0 0 60px red;
+}
 
 
 
 
 
+b {
+    color: #ff3636;
+}
 
 
 
+.footer_text {
+    position: relative;
+    bottom: -500px;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    box-shadow: 10px 0px 10px 0px rgb(65, 9, 9);
+    font-size: 15px;
+}
+
+
+
+
+/**************************/
+/* MEDIA QUERY */
+/**************************/
+
+/* BELOW 832px (Tablets) */
+@media (max-width: 52em) {
+    html {
+      /* 8px / 16px = 0.5 = 50% */
+      font-size: 50%;
+    }
+  }
+  
 /* BELOW 600px (Phones) */
 @media (max-width: 37em) {
     .hamburger-menu {
@@ -507,4 +623,7 @@ h1 {
     h1 {
       font-size: 2rem;
     }
+
+    
+
   }
