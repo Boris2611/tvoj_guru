@@ -44,10 +44,20 @@ navItems.forEach((nav) => {
 
 
 
-//----Loading ---------------------------------
+//------------ Loading ---------------
 
 $( window ).on( "load", function() {
    
         $(".loader_wrapper").fadeOut("slow");
      
 });
+
+
+
+// --------- Scroll Down Button --------------
+$(function() {
+    $('.scroll-down').click (function() {
+      $('html, body').animate({scrollTop: $('section.ok').offset().top }, 'slow');
+      return false;
+    });
+  });
