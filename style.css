@@ -385,7 +385,7 @@ h1 {
   .video_text {
     color: white;
     top: 0px;
-    position: absolute;
+  z-index: 200;
     font-size: 30px;
     width: 100%;
     padding: 13px;
@@ -584,18 +584,23 @@ b {
 
 
 
-.footer_text {
-    position: relative;
-    bottom: -500px;
+
+
+.footer {
     width: 100%;
-    text-align: center;
-    background-color: black;
-    color: white;
-    box-shadow: 10px 0px 10px 0px rgb(65, 9, 9);
-    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    height: 30px;
+    font-size: 10px;
+    padding: 10px;
+
 }
 
-
+.footer:hover {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+}
 
 
 /**************************/
