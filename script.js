@@ -47,7 +47,7 @@ navItems.forEach((nav) => {
 //------------ Loading ---------------
 
 $( window ).on( "load", function() {
-   
+        $(this).scrollTop(0);
         $(".loader_wrapper").fadeOut("slow");
      
 });
